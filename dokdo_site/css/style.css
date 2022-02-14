@@ -1,0 +1,815 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
+
+#wrap {
+	width: 100%;
+}
+
+header > .nav {
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-bottom: 1px solid #ccc;
+	z-index: 1000;
+}
+
+header > .nav > .frame {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 1100px;
+	margin: 0 auto;
+	line-height: 80px;
+}
+
+header > .nav > .frame > h1 {
+	width: 120px;
+	background-image: url(./../images/logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+header > .nav > .frame > h1 > a {
+	display: block;
+	height: 80px;
+	line-height: 80px;
+	text-indent: -9999px;
+}
+
+header > .nav > .frame > .gnb {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: right;
+	width: 1142px;
+}
+
+header > .nav > .frame > .gnb > li {
+	width: 80px;
+	margin-right: 10px;
+}
+header > .nav > .frame > .gnb > li.on > a,
+header > .nav > .frame > .gnb > li:hover > a {
+	color: #0084e0;
+	font-weight: 600;
+}
+
+header > .nav > .frame > .gnb > li:last-child {
+	margin-right: 40px;
+}
+
+header > .nav > .frame > .gnb > li > a {
+	display: block;
+	text-align: center;
+	font-weight: 400;
+	font-size: 12px;
+}
+
+section > .main {
+	position: relative;
+	width: 100%;
+	height: 780px;
+	background-image: url(./../images/main_bg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+section > .main::after {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 780px;
+	background-color: rgba(0, 0, 0, 0.4);
+	content: '';
+}
+
+section > .main > .main-text {
+	width: 1132px;
+	margin: 0 auto;
+}
+
+section > .main > .main-text > .text,
+section > .main > .main-text > p {
+	position: absolute;
+	text-align: center;
+}
+
+section > .main > .main-text > .text {
+	width: 480px;
+	left: 50%;
+	top: 330px;
+	margin-left: -240px;
+	font-family: 'Merriweather';
+	letter-spacing: 1px;
+	z-index: 900;
+}
+
+section > .main > .main-text > .text > h2 {
+	margin-bottom: 20px;
+	color: #fff;
+	font-weight: 900;
+	font-size: 38px;
+}
+
+section > .main > .main-text > .text > P {
+	color: #fff;
+	font-weight: 700;
+	font-size: 26px;
+	text-transform: uppercase;
+}
+
+section > .main > .main-text > p {
+	width: 60px;
+	left: 50%;
+	bottom: 30px;
+	margin-left: -30px;
+	z-index: 900;
+}
+
+section > .main > .main-text > p > a {
+	display: block;
+	height: 25px;
+	text-indent: -9999px;
+	background-image: url(./../images/ico_arrow.png);
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+section > .list-1 {
+	position: relative;
+	width: 1100px;
+	margin: 0 auto 100px;
+}
+
+section > .list-1 > .title {
+	height: 140px;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 140px;
+	text-align: center;
+}
+
+section > .list-1 > .content-2,
+section > .list-1 > .content-1 {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section > .list-1 > .content-1 > .text {
+	position: relative;
+	text-align: right;
+	font-size: 15px;
+}
+
+section > .list-1 > .content-2 > .text {
+	position: relative;
+	font-size: 15px;
+}
+
+section > .list-1 > .content-1 > .text::after,
+section > .list-1 > .content-2 > .text::after {
+	display: block;
+	position: absolute;
+	width: 382px;
+	height: 372px;
+	background-image: url(./../images/dokdo/외교부_logo.jpg);
+	content: '';
+	z-index: -100;
+	opacity: 0.5;
+}
+
+section > .list-1 > .content-1 > .text::after {
+	left: 30px;
+	top: -86px;
+}
+
+section > .list-1 > .content-2 > .text::after {
+	left: 58px;
+	top: -18px;
+}
+
+section > .list-1 > .content-2 > .text > h2,
+section > .list-1 > .content-1 > .text > h2 {
+	margin-bottom: 30px;
+	font-weight: 500;
+	font-size: 26px;
+}
+
+section > .list-1 > .content-1 > .frame,
+section > .list-1 > .content-2 > .frame {
+	width: 598px;
+	height: 440px;
+	text-indent: -9999px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+section > .list-1 > .content-1 > .frame {
+	background-image: url(./../images/dokdo/intro_stand.jpg);
+}
+
+section > .list-1 > .content-2 > .frame {
+	background-image: url(./../images/dokdo/intro_compose.jpg);
+}
+
+section > .list-2 {
+	width: 100%;
+	height: 1712px;
+	color: #fff;
+	background-image: url(./../images/dokdo/history_bg.jpg);
+	background-position: center center;
+	z-index: -100;
+}
+
+section > .list-2 > .list-container {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+section > .list-2 > .list-container > .title {
+	height: 140px;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 140px;
+	text-align: center;
+}
+
+section > .list-2 > .list-container > .fxf {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+section > .list-2 > .list-container > .fxf > .true,
+section > .list-2 > .list-container > .fxf > .data {
+	width: 540px;
+	text-align: center;
+}
+
+section > .list-2 > .list-container > .fxf > .true > h2,
+section > .list-2 > .list-container > .fxf > .data > h2 {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 140px;
+}
+
+section > .list-2 > .list-container > .fxf > .true > p,
+section > .list-2 > .list-container > .fxf > .data > p {
+	position: relative;
+	width: 540px;
+	height: 337px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 337px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+section > .list-2 > .list-container > .fxf > .true > p > .shadow,
+section > .list-2 > .list-container > .fxf > .data > p > .shadow {
+	display: block;
+	width: 538px;
+	height: 335px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+section > .list-2 > .list-container > .fxf > .true > .one > .shadow {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	z-index: 0;
+}
+
+section > .list-2 > .list-container > .fxf > .true > .two > .shadow {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	z-index: 0;
+}
+
+section > .list-2 > .list-container > .fxf > .data > .one > .shadow {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	z-index: 0;
+}
+
+section > .list-2 > .list-container > .fxf > .data > .two > .shadow {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	z-index: 0;
+}
+
+section > .list-2 > .list-container > .fxf > .true > p:hover > span,
+section > .list-2 > .list-container > .fxf > .data > p:hover > span {
+	display: none;
+}
+
+section > .list-2 > .list-container > .fxf > .true > p:nth-of-type(1) {
+	background-image: url(./../images/dokdo/history_true_1.jpg);
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+section > .list-2 > .list-container > .fxf > .true > p:nth-of-type(2) {
+	background-image: url(./../images/dokdo/history_true_2.jpg);
+	margin-right: 20px;
+}
+
+section > .list-2 > .list-container > .fxf > .data > p:nth-of-type(1) {
+	background-image: url(./../images/dokdo/history_document_1.jpg);
+	margin-bottom: 20px;
+}
+
+section > .list-2 > .list-container > .fxf > .data > p:nth-of-type(2) {
+	background-image: url(./../images/dokdo/history_document_2.jpg);
+}
+
+section > .list-2 > .list-container > .fxf > .true > p > span,
+section > .list-2 > .list-container > .fxf > .data > p > span {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	opacity: 0.8;
+}
+
+section > .list-2 > .list-container > .fxf > .true > p:nth-of-type(1) > span {
+	left: 98px;
+}
+
+section > .list-2 > .list-container > .fxf > .true > p:nth-of-type(2) > span {
+	left: 170px;
+}
+
+section > .list-2 > .list-container > .fxf > .data > p:nth-of-type(1) > span {
+	left: 156px;
+}
+
+section > .list-2 > .list-container > .fxf > .data > p:nth-of-type(2) > span {
+	left: 178px;
+}
+
+section > .list-2 > .list-container > .char {
+	text-align: center;
+}
+
+section > .list-2 > .list-container > .char > h2 {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 140px;
+}
+
+section > .list-2 > .list-container > .char > ul {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+section > .list-2 > .list-container > .char > ul > li {
+	position: relative;
+	width: 260px;
+	height: 416px;
+}
+
+section > .list-2 > .list-container > .char > ul > li:nth-of-type(1) {
+	background-image: url(./../images/dokdo/history_lee_1.jpg);
+}
+
+section > .list-2 > .list-container > .char > ul > li:nth-of-type(2) {
+	background-image: url(./../images/dokdo/history_ahn.jpg);
+}
+
+section > .list-2 > .list-container > .char > ul > li:nth-of-type(3) {
+	background-image: url(./../images/dokdo/history_lee_2.jpg);
+}
+
+section > .list-2 > .list-container > .char > ul > li:nth-of-type(4) {
+	background-image: url(./../images/dokdo/history_hong.jpg);
+}
+
+section > .list-2 > .list-container > .char > ul > li:hover > span {
+	display: none;
+}
+
+section > .list-2 > .list-container > .char > ul > li > span {
+	display: block;
+}
+
+section > .list-2 > .list-container > .char > ul > li > .shadow {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 258px;
+	height: 414px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+section > .list-2 > .list-container > .char > ul > li > .text {
+	position: absolute;
+	left: 110px;
+	top: 180px;
+	font-weight: 500;
+	font-size: 16px;
+	opacity: 0.8;
+}
+
+section > .list-2 > .list-container > .char > ul > li > .text2 {
+	position: absolute;
+	left: 109px;
+	top: 206px;
+	font-weight: 500;
+	font-size: 16px;
+	opacity: 0.8;
+}
+
+section > .list-3 {
+	color: #fff;
+	background-color: #6283a4;
+}
+
+section > .list-3 > .list-container {
+	width: 1100px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+
+section > .list-3 > .list-container > .title {
+	height: 140px;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 140px;
+	text-align: center;
+}
+
+section > .list-3 > .list-container > .locate > h3 {
+	margin-bottom: 50px;
+	font-weight: 500;
+	font-size: 26px;
+	text-align: center;
+}
+
+section > .list-3 > .list-container > .locate > ul {
+	display: flex;
+	flex-flow: row nowrap;
+	font-size: 14px;
+}
+
+section > .list-3 > .list-container > .locate > ul > li:nth-child(1) {
+	width: 550px;
+	height: 302px;
+	margin-right: 40px;
+	text-indent: -9999px;
+	background-image: url(./../images/dokdo/status_map.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+section > .list-3 > .list-container > .locate > ul > li:nth-child(2) {
+	margin-top: 106px;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 30px;
+}
+section > .list-3 > .list-container > .people {
+	margin-top: 20px;
+}
+
+section > .list-3 > .list-container > .people > h3 {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 130px;
+	text-align: center;
+}
+
+section > .list-3 > .list-container > .people > ul {
+	position: relative;
+	padding: 20px;
+}
+
+section > .list-3 > .list-container > .people > ul::before {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 2px;
+	height: 100%;
+	margin-left: -1px;
+	background-color: #fff;
+	content: '';
+}
+
+section > .list-3 > .list-container > .people > ul > li {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	margin-bottom: 40px;
+}
+
+section > .list-3 > .list-container > .people > ul > li:last-child {
+	margin-bottom: 0;
+}
+
+section > .list-3 > .list-container > .people > ul > li > .image {
+	display: block;
+	width: 400px;
+	height: 232px;
+	background-repeat: no-repeat;
+}
+
+section > .list-3 > .list-container > .people > ul > li:nth-child(1) > .image {
+	background-image: url(./../images/dokdo/status_person_1.jpg);
+}
+
+section > .list-3 > .list-container > .people > ul > li:nth-child(2) > .image {
+	background-image: url(./../images/dokdo/status_person_2.jpg);
+}
+
+section > .list-3 > .list-container > .people > ul > li:nth-child(3) > .image {
+	background-image: url(./../images/dokdo/status_person_3.jpg);
+}
+
+section > .list-3 > .list-container > .people > ul > li:nth-child(4) > .image {
+	background-image: url(./../images/dokdo/status_person_4.jpg);
+}
+
+section > .list-3 > .list-container > .people > ul > li > .text-box {
+	width: 400px;
+	margin-top: 50px;
+}
+
+section > .list-3 > .list-container > .people > ul > li > .text-box > h4 {
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+section > .list-4 {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+/* width: 1232px;
+height: 700px; */
+
+section > .list-4 > .content-2,
+section > .list-4 > .content-1 {
+	width: 545px;
+	height: 545px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+section > .list-4 > .content-1 {
+	position: relative;
+	background-image: url(./../images/live_1.jpg);
+}
+
+section > .list-4 > .content-2 {
+	position: relative;
+	background-image: url(./../images/live_2.jpg);
+}
+
+section > .list-4 > .content-1 > h2 {
+	margin: 10px 20px 0 0;
+	color: #fff;
+	font-weight: 600;
+	font-size: 30px;
+	text-align: right;
+}
+
+section > .list-4 > .content-2 > h2 {
+	margin: 10px 0 0 20px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 30px;
+}
+
+section > .list-4 > .content-2 > p,
+section > .list-4 > .content-1 > p {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	width: 207px;
+	height: 50px;
+	border: 3px solid #fff;
+	box-sizing: border-box;
+}
+
+section > .list-4 > .content-2 > p {
+	left: 20px;
+	bottom: 20px;
+}
+
+section > .list-4 > .content-2 > p > a,
+section > .list-4 > .content-1 > p > a {
+	display: block;
+	color: #fff;
+	font-size: 12px;
+	line-height: 46px;
+	text-align: center;
+}
+
+section > .list-5 > .title {
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 140px;
+	text-align: center;
+	background-color: rgb(30, 30, 30);
+}
+
+section > .list-5 > .slides {
+	position: relative;
+	width: 1000px;
+	height: 656px;
+	margin: 50px auto;
+}
+
+section > .list-5 > .slides > .screen {
+	width: 800px;
+	height: 500px;
+	text-indent: -9999px;
+	border: 7px solid rgb(30, 30, 30);
+	box-sizing: border-box;
+}
+
+section > .list-5 > .slides > .screen > img {
+	display: block;
+	width: 786px;
+	height: 486px;
+}
+
+section > .list-5 > .slides > ul > li {
+	position: absolute;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+section > .list-5 > .slides > ul > li:nth-child(1) {
+	top: 0;
+	background-image: url(./../images/dokdo/gallery_5.jpg);
+}
+
+section > .list-5 > .slides > ul > li:nth-child(2) {
+	top: 125px;
+	border-top: 0;
+	background-image: url(./../images/dokdo/gallery_8.jpg);
+}
+
+section > .list-5 > .slides > ul > li:nth-child(3) {
+	top: 250px;
+	border-top: 0;
+	background-image: url(./../images/dokdo/gallery_6.jpg);
+}
+
+section > .list-5 > .slides > ul > li:nth-child(4) {
+	top: 375px;
+	border-top: 0;
+	background-image: url(./../images/dokdo/gallery_7.jpg);
+}
+
+section > .list-5 > .slides > ul > li:nth-child(5) {
+	border-right: 0;
+	background-image: url(./../images/dokdo/gallery_1.jpg);
+}
+
+section > .list-5 > .slides > ul > li:nth-child(6) {
+	right: 500px;
+	border-right: 0;
+	background-image: url(./../images/dokdo/gallery_2.jpg);
+}
+
+section > .list-5 > .slides > ul > li:nth-child(7) {
+	right: 250px;
+	border-right: 0;
+	background-image: url(./../images/dokdo/gallery_3.jpg);
+}
+
+section > .list-5 > .slides > ul > li:nth-child(8) {
+	right: 0;
+	background-image: url(./../images/dokdo/gallery_4.jpg);
+}
+
+section > .list-5 > .slides > ul > .side {
+	right: 0;
+	width: 200px;
+	height: 125px;
+	line-height: 125px;
+	border: 7px solid rgb(30, 30, 30);
+	border-left: 0;
+	box-sizing: border-box;
+}
+
+section > .list-5 > .slides > ul > .bottom {
+	bottom: 0;
+	width: 250px;
+	height: 156px;
+	line-height: 156px;
+	border: 7px solid rgb(30, 30, 30);
+	border-top: 0;
+	box-sizing: border-box;
+}
+
+section > .list-5 > .slides > ul > .side > span {
+	display: block;
+	/* display: none; */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 125px;
+	background-color: rgba(30, 30, 30, 0.6);
+}
+section > .list-5 > .slides > ul > li:nth-child(8) > span {
+	width: 242px;
+}
+
+section > .list-5 > .slides > ul > .bottom > span {
+	display: block;
+	/* display: none; */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 250px;
+	height: 156px;
+	background-color: rgba(30, 30, 30, 0.6);
+}
+
+section > .list-5 > .slides > ul > li:hover > span,
+section > .list-5 > .slides > ul > .on > span {
+	/* display: block; */
+	display: none;
+}
+
+section > .list-5 > .slides > ul > li > a {
+	display: block;
+	text-indent: -9999px;
+}
+
+footer {
+	background-color: rgb(30, 30, 30);
+}
+
+footer > .container {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	padding: 40px 0;
+	color: #fff;
+}
+
+footer > .container > h3 {
+	width: 200px;
+	background-image: url(./../images/logo_2.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+footer > .container > h3 > a {
+	display: block;
+	height: 70px;
+	margin-left: 70px;
+	line-height: 70px;
+	text-indent: -9999px;
+}
+
+footer > .container > .fnb {
+	position: absolute;
+	left: 300px;
+	top: 70px;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+footer > .container > .fnb > li {
+	margin-right: 80px;
+}
+
+footer > .container > .fnb > li:last-child {
+	margin-right: 0;
+}
+
+footer > .container > .fnb > li > a {
+	color: #fff;
+}
+
+footer > .container > address {
+	margin: 30px 0 0 300px;
+}
+
+footer > .container > address > span {
+	margin-left: 30px;
+}

@@ -1,0 +1,1998 @@
+@charset "UTF-8";
+@-webkit-keyframes moveVisual {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+@keyframes moveVisual {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@-webkit-keyframes moveBox {
+  0% {
+    top: 60px;
+  }
+  25% {
+    top: 173px;
+    background-color: gainsboro;
+  }
+  50% {
+    top: 60px;
+    background-color: #c8c8c8;
+  }
+  75% {
+    top: 173px;
+    background-color: gainsboro;
+  }
+  100% {
+    top: 60px;
+    background-color: #f0f0f0;
+  }
+}
+
+@keyframes moveBox {
+  0% {
+    top: 60px;
+  }
+  25% {
+    top: 173px;
+    background-color: gainsboro;
+  }
+  50% {
+    top: 60px;
+    background-color: #c8c8c8;
+  }
+  75% {
+    top: 173px;
+    background-color: gainsboro;
+  }
+  100% {
+    top: 60px;
+    background-color: #f0f0f0;
+  }
+}
+
+#wrap .h-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+#wrap header {
+  position: relative;
+  width: 100%;
+  min-width: 1100px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+  /* opacity: 0.3; */
+}
+
+#wrap header:after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 1px;
+  border-bottom: 1px solid #ccc;
+  content: '';
+}
+
+#wrap header > .container {
+  position: relative;
+  width: 1100px;
+  height: 66px;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+#wrap header > .container > .logo {
+  position: relative;
+  width: 116px;
+}
+
+#wrap header > .container > .logo > a {
+  display: block;
+  height: 66px;
+  line-height: 66px;
+  text-indent: -9999px;
+}
+
+#wrap header > .container > .logo > a::before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 7px;
+  width: 60px;
+  height: 100%;
+  margin-left: -30px;
+  background-image: url(./../images/my_logo_b.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -100;
+  content: '';
+}
+
+#wrap header > .container > nav {
+  position: absolute;
+  right: 30px;
+  top: 0;
+}
+
+#wrap header > .container > nav > .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 600px;
+}
+
+#wrap header > .container > nav > .gnb > li {
+  width: 100px;
+}
+
+#wrap header > .container > nav > .gnb > li > a {
+  display: block;
+  position: relative;
+  height: 66px;
+  font-weight: 500;
+  line-height: 66px;
+  text-align: center;
+}
+
+#wrap header > .container > nav > .gnb > li > a::before {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  content: '';
+}
+
+#wrap header > .container > nav > .gnb > li.on > a,
+#wrap header > .container > nav > .gnb > li:hover > a {
+  font-weight: 900;
+}
+
+#wrap header > .container > nav > .gnb > li.on > a::before,
+#wrap header > .container > nav > .gnb > li:hover > a::before {
+  display: block;
+}
+
+#wrap header ~ section {
+  padding-top: 100px;
+}
+
+#wrap header ~ section > h2 {
+  color: #222;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: -2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#wrap section {
+  width: 100%;
+  min-width: 1100px;
+}
+
+#wrap section#visual {
+  position: relative;
+  min-width: 1100px;
+  background-image: url(./../images/resume_visual.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-animation: moveVisual 8s infinite;
+          animation: moveVisual 8s infinite;
+}
+
+#wrap section#visual:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(70, 70, 70, 0.4);
+  content: '';
+}
+
+#wrap section#visual > .intro > .welcome {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  color: #222;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 100px;
+  letter-spacing: -4px;
+  opacity: 0;
+}
+
+#wrap section#visual > .intro > .welcome > span {
+  display: block;
+}
+
+#wrap section#visual > .intro > .cont {
+  position: absolute;
+  left: 58px;
+  top: 305px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -1px;
+  opacity: 0;
+}
+
+#wrap section#visual > .intro > .cont > span {
+  display: block;
+  color: #222;
+}
+
+#wrap section#visual > .intro > .name {
+  position: absolute;
+  right: 50px;
+  bottom: 60px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: -2px;
+  z-index: 100;
+  opacity: 0;
+}
+
+#wrap section#visual > .intro > .tit {
+  position: absolute;
+  right: 50px;
+  bottom: 0px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: -2px;
+  z-index: 100;
+  opacity: 0;
+}
+
+#wrap section#visual > .intro-right > p {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -30px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: right;
+  letter-spacing: -1px;
+}
+
+#wrap section#visual > .intro-right > p > span {
+  display: block;
+  color: #222;
+}
+
+#wrap section#aboutme {
+  position: relative;
+}
+
+#wrap section#aboutme > article {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+#wrap section#aboutme > .intro {
+  position: relative;
+  margin-top: 80px;
+}
+
+#wrap section#aboutme > .intro > .myvisual {
+  height: 500px;
+}
+
+#wrap section#aboutme > .intro > .myvisual > .frame {
+  position: absolute;
+  left: 130px;
+  top: 120px;
+  border: 3px solid #222;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap section#aboutme > .intro > .myvisual > .frame > img {
+  display: block;
+  width: 200px;
+  height: 100%;
+}
+
+#wrap section#aboutme > .intro > .myvisual > .text > h3 {
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#wrap section#aboutme > .intro > .myvisual > .text > .list {
+  position: absolute;
+  right: 70px;
+  top: 136px;
+}
+
+#wrap section#aboutme > .intro > .myvisual > .text > .list > li {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#wrap section#aboutme > .intro > .myvisual > .text > .list > li::before {
+  display: block;
+  position: absolute;
+  left: -12px;
+  top: 11px;
+  width: 6px;
+  height: 4px;
+  background-color: #222;
+  content: '';
+}
+
+#wrap section#aboutme > .skill {
+  width: 100%;
+  background-color: #222;
+}
+
+#wrap section#aboutme > .skill > .container {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+  color: #fff;
+}
+
+#wrap section#aboutme > .skill > .container > h3 {
+  margin-bottom: 70px;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+#wrap section#aboutme > .skill > .container > .skill-stick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#wrap section#aboutme > .skill > .container > .skill-stick > .skill-stick-container {
+  width: 43%;
+}
+
+#wrap section#aboutme > .skill > .container > .skill-stick > .skill-stick-container > .item {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap section#aboutme > .skill > .container > .skill-stick > .skill-stick-container > .item > h4 {
+  width: 17%;
+  height: 10px;
+  padding-right: 8%;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 10px;
+  text-align: right;
+}
+
+#wrap section#aboutme > .skill > .container > .skill-stick > .skill-stick-container > .item > .progress {
+  position: relative;
+  width: 75%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+#wrap section#aboutme > .skill > .container > .skill-stick > .skill-stick-container > .item > .progress > .bar {
+  height: 100%;
+  width: 0;
+  /*js에서 동적으로 할당*/
+  background-color: #fff;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+#wrap section#aboutme > .skill > .container > .skill-stick > .skill-stick-container > .item > .progress > .bar > span {
+  position: absolute;
+  top: -20px;
+  right: 15px;
+}
+
+#wrap section#aboutme > .skill > .container > .ability {
+  margin-bottom: 100px;
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-1 {
+  margin-top: 60px;
+}
+
+#wrap section#aboutme > .skill > .container > .ability > h4 {
+  margin-bottom: 100px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+}
+
+#wrap section#aboutme > .skill > .container > .ability > ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#wrap section#aboutme > .skill > .container > .ability > ol > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 45%;
+  height: 150px;
+  padding-left: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap section#aboutme > .skill > .container > .ability > ol > li > span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+}
+
+#wrap section#aboutme > .skill > .container > .ability > ol > li > h5 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#wrap section#aboutme > .skill > .container > .ability > ol > li > p {
+  line-height: 1.6;
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-1 > ol > li:first-child > span {
+  background-image: url(./../images/aboutme_01/skill_uiux.png);
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-1 > ol > li:last-child > span {
+  background-image: url(./../images/aboutme_01/skill_respons.png);
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-2 > ol > li:first-child > span {
+  background-image: url(./../images/aboutme_01/skill_html_css.png);
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-2 > ol > li:last-child > span {
+  background-image: url(./../images/aboutme_01/skill_designtools.png);
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-3 {
+  margin-bottom: 0;
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-3 > ol > li:first-child > span {
+  background-image: url(./../images/aboutme_01/skill_sass.png);
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-3 > ol > li:last-child > span {
+  background-image: url(./../images/aboutme_01/skill_js.png);
+}
+
+#wrap section#aboutme > .skill > .container > .ability.ability-3 > ol > li:last-child > span > img {
+  position: absolute;
+  left: 20px;
+  bottom: -13px;
+}
+
+#wrap section#aboutme > .mydesc {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+#wrap section#aboutme > .mydesc > .cont > .text {
+  width: 540px;
+  margin-right: 20px;
+  padding-top: 16px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#wrap section#aboutme > .mydesc > .cont > .text > span {
+  display: block;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#wrap section#aboutme > .mydesc > .cont > .picture > .frame {
+  width: 260px;
+  height: 260px;
+  text-indent: -9999px;
+  border-radius: 5px;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+
+#wrap section#aboutme > .mydesc > .cont > .picture > .frame:hover {
+  background-size: 120% 120%;
+  -webkit-transition: all ease-out 0.8s;
+  transition: all ease-out 0.8s;
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 280px;
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont1 > .picture {
+  position: relative;
+  width: 540px;
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont1 > .picture > .frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 20px;
+  background-image: url(./../images/my_picture_01.jpeg);
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont2 > .picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont2 > .picture > .frame {
+  margin-right: 20px;
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont2 > .picture > .frame:nth-child(1) {
+  background-image: url(./../images/my_picture_02.jpeg);
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont2 > .picture > .frame:nth-child(2) {
+  background-image: url(./../images/my_picture_05.jpeg);
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont2 > .picture > .frame:nth-child(3) {
+  background-image: url(./../images/my_picture_03.jpeg);
+}
+
+#wrap section#aboutme > .mydesc > .cont.cont2 > .picture > .frame:nth-child(4) {
+  margin-right: 0;
+  background-image: url(./../images/my_picture_04.png);
+}
+
+#wrap section#portfolio {
+  margin-bottom: 50px;
+}
+
+#wrap section#portfolio > article {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+#wrap section#portfolio > .slides {
+  position: relative;
+  margin-top: 150px;
+}
+
+#wrap section#portfolio > .slides > .shadow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+#wrap section#portfolio > .slides > .shadow > img {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 800px;
+  margin: -400px 0 0 -300px;
+}
+
+#wrap section#portfolio > .slides > .slides-container {
+  position: relative;
+  width: 100%;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 70px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure:nth-child(1) > .frame {
+  margin-right: 20px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure:nth-child(2) > figcaption {
+  margin-left: 50px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure:nth-child(3) > .frame {
+  margin-right: 10px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure:nth-child(4) {
+  margin-bottom: 0;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure:nth-child(4) > figcaption {
+  margin-left: 50px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption {
+  width: 400px;
+  padding-top: 38px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > h3 {
+  color: #222;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .tip {
+  margin-top: 2px;
+  color: #909090;
+  font-size: 16px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .desc,
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .tools,
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .etc {
+  margin-top: 20px;
+  color: #404040;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .tools,
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .etc {
+  margin-top: 20px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .btn > a {
+  display: block;
+  width: 132px;
+  height: 40px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+  background-color: #222;
+  border: 2px solid #222;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .btn > a.proc {
+  margin-right: 10px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > figcaption > .btn > a:hover {
+  color: #222;
+  background-color: #fff;
+  border: 2px solid #222;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > .frame {
+  display: block;
+  position: relative;
+  width: 660px;
+  height: 380px;
+}
+
+#wrap section#portfolio > .slides > .slides-container > figure > .frame > img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 548px;
+  margin: -156px 0 0 -274px;
+  border: 5px solid #222;
+  border-left: 7px solid #222;
+  border-right: 7px solid #222;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap section#portfolio > .works {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+#wrap section#portfolio > .works > h3 {
+  position: relative;
+  width: 300px;
+  margin: 0 auto 56px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+#wrap section#portfolio > .works > .slide-list {
+  top: 977px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#wrap section#portfolio > .works > .slide-list > li {
+  position: relative;
+  width: 384px;
+  height: 620px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 7px 20px 0 rgba(182, 245, 206, 0.2);
+          box-shadow: 0 7px 20px 0 rgba(182, 245, 206, 0.2);
+  padding: 48px 0 0 65px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > h4 {
+  color: #454249;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 36px;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p {
+  color: #65616b;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p > .tip {
+  display: block;
+  color: #ccc;
+  font-size: 13px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p > .proc {
+  display: block;
+  display: none;
+  width: 180px;
+  height: 46px;
+  margin: 20px 0 30px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 46px;
+  text-align: center;
+  background-color: #68c3a3;
+  border: 1px solid #68c3a3;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 0 0 #454249;
+          box-shadow: inset 0 0 0 0 #454249;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p > .proc:hover {
+  -webkit-box-shadow: inset 180px 0 0 0 #454249;
+          box-shadow: inset 180px 0 0 0 #454249;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p > .frame {
+  display: block;
+  width: 321px;
+  margin-left: -35px;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p > .frame > img {
+  display: block;
+  width: 100%;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p > .frame > .btn {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  width: 194px;
+  height: 65px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 65px;
+  text-align: center;
+  background-color: #444;
+  border: 2px solid #444;
+}
+
+#wrap section#portfolio > .works > .slide-list > li > p > .frame > .btn:hover {
+  color: #3063d6;
+  border-color: #3063d6;
+  background-color: #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+
+#wrap section#function {
+  margin-bottom: 100px;
+}
+
+#wrap section#function article {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+#wrap section#function > .css-func {
+  margin-top: 150px;
+}
+
+#wrap section#function > .css-func > .func {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+}
+
+#wrap section#function > .css-func > .func > li {
+  position: relative;
+  width: 515px;
+  height: 515px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(1) {
+  margin-right: 70px;
+  margin-bottom: 70px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(1) > .item {
+  position: relative;
+  overflow: hidden;
+  width: 455px;
+  height: 360px;
+  margin: 30px auto 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(1) > .item > span {
+  display: block;
+  position: absolute;
+  width: 113px;
+  height: 113px;
+  background-color: #f0f0f0;
+  -webkit-animation: moveBox 4s infinite;
+          animation: moveBox 4s infinite;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(1) > .item > .move-1 {
+  left: 0;
+  top: 60px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(1) > .item > .move-2 {
+  left: 113px;
+  top: 60px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(1) > .item > .move-3 {
+  left: 226px;
+  top: 60px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(1) > .item > .move-4 {
+  left: 339px;
+  top: 60px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) {
+  margin-bottom: 70px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 455px;
+  height: 360px;
+  margin: 30px auto 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div {
+  position: relative;
+  overflow: hidden;
+  width: 145px;
+  height: 145px;
+  margin-right: 10px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div > span {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 121px;
+  height: 121px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div > span.txt {
+  height: 79px;
+  padding-top: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1 {
+  margin-top: 23px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1 > .move {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 121px;
+  height: 121px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1 > .move > span {
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #e6e6e6;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1 > .move > span.m1 {
+  left: 0;
+  top: 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1 > .move > span.m2 {
+  left: 60px;
+  top: 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1 > .move > span.m3 {
+  left: 0;
+  top: 60px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1 > .move > span.m4 {
+  left: 60px;
+  top: 60px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1:hover > .move > span {
+  width: 0;
+  height: 0;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1:hover > .move > span.m1 {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1:hover > .move > span.m2 {
+  left: 120px;
+  top: 0;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1:hover > .move > span.m3 {
+  left: 0;
+  top: 120px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-1:hover > .move > span.m4 {
+  left: 120px;
+  top: 120px;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2 {
+  margin-top: 23px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2 > .move {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 120px;
+  height: 120px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2 > .move > span {
+  display: block;
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background-color: #e6e6e6;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2 > .move > span.m1 {
+  left: 0;
+  top: 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2 > .move > span.m2 {
+  left: 0;
+  top: 60px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2:hover > .move > span {
+  width: 0;
+  height: 0;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2:hover > .move > span.m1 {
+  left: 60px;
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-2:hover > .move > span.m2 {
+  left: 60px;
+  top: 120px;
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3 {
+  margin-top: 23px;
+  margin-right: 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3 > .move {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 120px;
+  height: 120px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3 > .move > span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #e6e6e6;
+  -webkit-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3:hover > .move > span {
+  -webkit-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3:hover > .move > span.m1 {
+  -webkit-transform: skew(45deg, 45deg);
+          transform: skew(45deg, 45deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3:hover > .move > span.m2 {
+  -webkit-transform: skew(-45deg, -45deg);
+          transform: skew(-45deg, -45deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3:hover > .move > span.m3 {
+  -webkit-transform: skew(-45deg, -45deg);
+          transform: skew(-45deg, -45deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-3:hover > .move > span.m4 {
+  -webkit-transform: skew(45deg, 45deg);
+          transform: skew(45deg, 45deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4 {
+  position: relative;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4 > .move {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 120px;
+  height: 120px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4 > .move > span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #e6e6e6;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4:hover > .move > span {
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4:hover > .move > span.m1 {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4:hover > .move > span.m2 {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4:hover > .move > span.m3 {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-4:hover > .move > span.m4 {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5 > .move {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 120px;
+  height: 120px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5 > .move > span {
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #e6e6e6;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5 > .move > span.m1 {
+  left: 0;
+  top: 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5 > .move > span.m2 {
+  left: 60px;
+  top: 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5 > .move > span.m3 {
+  left: 0;
+  top: 60px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5 > .move > span.m4 {
+  left: 60px;
+  top: 60px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5:hover > .move > span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5:hover > .move > span.m1 {
+  left: 60px;
+  top: 60px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5:hover > .move > span.m2 {
+  left: 0;
+  top: 60px;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5:hover > .move > span.m3 {
+  left: 60px;
+  top: 0;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-5:hover > .move > span.m4 {
+  left: 0;
+  top: 0;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 {
+  margin-right: 0;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .txt {
+  color: #fff;
+  z-index: 100;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move {
+  overflow: hidden;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 120px;
+  height: 120px;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m1 {
+  background-color: #323232;
+  z-index: 110;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m2 {
+  background-color: #464646;
+  z-index: 90;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m3 {
+  background-color: #5a5a5a;
+  z-index: 80;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m4 {
+  background-color: #6e6e6e;
+  z-index: 70;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m5 {
+  background-color: #828282;
+  z-index: 60;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m6 {
+  background-color: #969696;
+  z-index: 50;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m7 {
+  background-color: #aaaaaa;
+  z-index: 40;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m8 {
+  background-color: #bebebe;
+  z-index: 30;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m9 {
+  background-color: #d2d2d2;
+  z-index: 20;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6 > .move > span.m10 {
+  background-color: #e6e6e6;
+  z-index: 10;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span {
+  left: 60px;
+  top: 60px;
+  width: 0;
+  height: 0;
+  -webkit-transition: all ease-out 1s;
+  transition: all ease-out 1s;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m1 {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m2 {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m3 {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m4 {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m5 {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m6 {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m7 {
+  -webkit-transition-delay: 1.7s;
+          transition-delay: 1.7s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m8 {
+  -webkit-transition-delay: 1.9s;
+          transition-delay: 1.9s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m9 {
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+
+#wrap section#function > .css-func > .func > li:nth-child(2) > .item > div.move-6:hover > .move > span.m10 {
+  -webkit-transition-delay: 2.3s;
+          transition-delay: 2.3s;
+}
+
+#wrap section#function > .css-func > .func > li > .text {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+#wrap section#function > .css-func > .func > li > .text > span {
+  display: block;
+}
+
+#wrap section#function > .css-func > .func > li > .text > .tit {
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -2px;
+}
+
+#wrap section#function > .css-func > .func > li > .text > .desc {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#wrap section#function > .css-func > .func > li > .text > .desc > span {
+  margin-left: 40px;
+  color: #bebebe;
+  font-size: 14px;
+}
+
+#wrap section#function > .js-func > .func {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+}
+
+#wrap section#function > .js-func > .func > li {
+  position: relative;
+  width: 515px;
+  height: 515px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+#wrap section#function > .js-func > .func > li > .item {
+  width: 455px;
+  height: 360px;
+  margin: 30px auto 0;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) {
+  margin-right: 70px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides {
+  position: relative;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container > li {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container > li > .frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container > li:nth-child(1) {
+  display: block;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container > li:nth-child(1) > .frame {
+  background-image: url(./../images/func_js_visual_01.jpeg);
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container > li:nth-child(2) > .frame {
+  background-image: url(./../images/func_js_visual_02.jpeg);
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container > li:nth-child(3) > .frame {
+  background-image: url(./../images/func_js_visual_03.jpeg);
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-container > li:nth-child(4) > .frame {
+  background-image: url(./../images/func_js_visual_04.jpeg);
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 325px;
+  width: 300px;
+  height: 10px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-pagination > li {
+  width: 75px;
+  height: 10px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-pagination > li > a {
+  display: block;
+  line-height: 10px;
+  text-indent: -9999px;
+  background-color: #f0f0f0;
+  -webkit-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-pagination > li:first-child > a {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-pagination > li:last-child > a {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-pagination > li.on > a, #wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .slides-pagination > li:hover > a {
+  background-color: #333;
+  -webkit-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: absolute;
+  left: 325px;
+  top: 85px;
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a {
+  display: block;
+  position: relative;
+  width: 60px;
+  line-height: 60px;
+  margin: 0 10px 10px 0;
+  text-indent: -9999px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.prev::before {
+  display: block;
+  position: absolute;
+  left: 24px;
+  top: 22px;
+  width: 10px;
+  height: 10px;
+  border-left: 8px solid #333;
+  border-bottom: 8px solid #333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+  content: '';
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.prev:hover::before {
+  border-color: #fff;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.next {
+  margin-right: 0;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.next::before {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 22px;
+  width: 10px;
+  height: 10px;
+  border-left: 8px solid #333;
+  border-bottom: 8px solid #333;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+  content: '';
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.next:hover::before {
+  border-color: #fff;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.play {
+  margin-bottom: 0;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.play::before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin: -11px 0 0 -4px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent transparent #333;
+  content: "";
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.play.on1::before, #wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.play:hover::before {
+  border-color: transparent transparent transparent #fff;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.pause {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.pause::before {
+  display: block;
+  position: absolute;
+  top: 21px;
+  left: 22px;
+  width: 6px;
+  height: 18px;
+  background-color: #333;
+  content: '';
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.pause::after {
+  display: block;
+  position: absolute;
+  top: 21px;
+  left: 32px;
+  width: 6px;
+  height: 18px;
+  background-color: #333;
+  content: '';
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.pause.on2::before, #wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.pause:hover::before {
+  background-color: #fff;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.pause.on2::after, #wrap section#function > .js-func > .func > li:nth-child(1) > .item > .slides > .button > a.pause:hover::after {
+  background-color: #fff;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(2) > .item {
+  position: relative;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(2) > .item > .frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 162px;
+  height: 162px;
+  margin: -81px 0 0 -81px;
+}
+
+#wrap section#function > .js-func > .func > li:nth-child(2) > .item > .frame > img {
+  display: block;
+}
+
+#wrap section#function > .js-func > .func > li > .text {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+#wrap section#function > .js-func > .func > li > .text > span {
+  display: block;
+}
+
+#wrap section#function > .js-func > .func > li > .text > .tit {
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -2px;
+}
+
+#wrap section#function > .js-func > .func > li > .text > .desc {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#wrap section#uxui {
+  background-color: #222;
+  padding-bottom: 100px;
+}
+
+#wrap section#uxui > article {
+  width: 1100px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+#wrap section#uxui > h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto 100px;
+  color: #fff;
+  line-height: 60px;
+  text-align: left;
+}
+
+#wrap section#uxui > h2 > .tit {
+  display: block;
+  width: 515px;
+}
+
+#wrap section#uxui > h2 > .tit > span {
+  display: block;
+}
+
+#wrap section#uxui > h2 > .tit.ui {
+  text-align: right;
+}
+
+#wrap section#uxui > .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+#wrap section#uxui > .desc > div {
+  width: 515px;
+}
+
+#wrap section#uxui > .desc > div > h3 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#wrap section#uxui > .desc > div > p {
+  font-size: 14px;
+}
+
+#wrap section#uxui > .desc > div > p > span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#wrap section#uxui > .desc > div.ui-desc {
+  text-align: right;
+}
+
+#wrap section#uxui > .uxui-desc > h3 {
+  font-size: 30px;
+}
+
+#wrap section#contact {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+#wrap section#contact > article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1100px;
+  margin: 120px auto 50px;
+}
+
+#wrap section#contact > article > h3 {
+  width: 515px;
+  font-size: 30px;
+  text-align: right;
+}
+
+#wrap section#contact > article > p {
+  width: 515px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+#wrap section#contact > article > p > a {
+  display: block;
+}
+
+#wrap section#contact > article > p > a > span {
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+#wrap section#contact > article > p > a:nth-child(1) > span {
+  margin-right: 74px;
+}
+
+#wrap footer {
+  width: 100%;
+  height: 100px;
+  min-width: 1100px;
+  background-color: #222;
+}
+
+#wrap footer > .info {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+#wrap footer > .info > h2 {
+  color: #ababab;
+  font-size: 13px;
+  line-height: 100px;
+}
+
+#wrap footer > .info > .logo {
+  position: absolute;
+  right: 0;
+  top: 28px;
+  width: 60px;
+  height: 66px;
+  text-indent: -9999px;
+  background-image: url(./../images/my_logo_w.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+#wrap aside {
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 60px;
+  z-index: 1000;
+}
+
+#wrap aside > a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #222;
+  border: 2px solid #222;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap aside > a:hover {
+  color: #222;
+  background-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
